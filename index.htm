@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="text-xxl text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.
+        </p>
+        <p class="text-xl text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.</p>
+        <p class="text-lg text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.</p>
+        <p class="text-md text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.</p>
+
+        <div>
+            <textarea name="" id="textValue" cols="30" rows="10"></textarea>
+        </div>
+    </div>
+
+    <script>
+        const textValue = document.getElementById("textValue");
+        const textViews = document.getElementsByClassName("text-view");
+
+        textValue.addEventListener('input', function () {
+            const typedValue = textValue.value;
+            for (let i = 0; i < textViews.length; i++) {
+                textViews[i].innerHTML = typedValue;
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

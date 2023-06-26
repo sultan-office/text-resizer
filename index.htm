@@ -11,12 +11,22 @@
 <body>
 
     <div class="container">
-        <p class="text-xxl text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.
+        <p class="text-xxl text-view" id="xxlView">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
+            consequatur.
         </p>
-        <p class="text-xl text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.</p>
-        <p class="text-lg text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.</p>
-        <p class="text-md text-view">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, consequatur.</p>
-
+        <p class="text-xl text-view" id="xlView">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
+            consequatur.</p>
+        <p class="text-lg text-view" id="lgView">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
+            consequatur.</p>
+        <p class="text-md text-view" id="mdView">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur,
+            consequatur.</p>
+        <div class="adder">
+            <input type="text" id="text-xxl" placeholder="text-xxl">
+            <input type="text" id="text-xl" placeholder="text-xl">
+            <input type="text" id="text-lg" placeholder="text-lg">
+            <input type="text" id="text-md" placeholder="text-md">
+            <button onclick="textSize()">Submit</button>
+        </div>
         <div>
             <textarea name="" id="textValue" cols="30" rows="10"></textarea>
         </div>
@@ -25,6 +35,32 @@
     <script>
         const textValue = document.getElementById("textValue");
         const textViews = document.getElementsByClassName("text-view");
+
+        // ____________________________
+
+
+        const xxlView = document.getElementById('xxlView');
+        const xlView = document.getElementById('xlView');
+        const lgView = document.getElementById('lgView');
+        const mdView = document.getElementById('mdView');
+
+        function textSize() {
+            const textXxl = document.getElementById('text-xxl').value;
+            const textXl = document.getElementById('text-xl').value;
+            const textLg = document.getElementById('text-lg').value;
+            const textMd = document.getElementById('text-md').value;
+
+            xxlView.style.width = textXxl + 'px';
+            xlView.style.width = textXl + 'px';
+            lgView.style.width = textLg + 'px';
+            mdView.style.width = textMd + 'px';
+        }
+
+
+
+
+
+
 
         textValue.addEventListener('input', function () {
             const typedValue = textValue.value;

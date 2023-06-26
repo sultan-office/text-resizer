@@ -25,6 +25,7 @@
             <input type="text" id="text-xl" placeholder="text-xl">
             <input type="text" id="text-lg" placeholder="text-lg">
             <input type="text" id="text-md" placeholder="text-md">
+            <input type="text" id="text-align" placeholder="text-align">
             <button onclick="textSize()">Submit</button>
         </div>
         <div>
@@ -49,11 +50,18 @@
             const textXl = document.getElementById('text-xl').value;
             const textLg = document.getElementById('text-lg').value;
             const textMd = document.getElementById('text-md').value;
+            const textAlign = document.getElementById('text-align').value;
 
             xxlView.style.width = textXxl + 'px';
             xlView.style.width = textXl + 'px';
             lgView.style.width = textLg + 'px';
             mdView.style.width = textMd + 'px';
+
+
+            xxlView.style.textAlign = textAlign;
+            xlView.style.textAlign = textAlign;
+            lgView.style.textAlign = textAlign;
+            mdView.style.textAlign = textAlign;
         }
 
 
